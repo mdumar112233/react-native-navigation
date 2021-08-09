@@ -22,14 +22,32 @@ function NotificationsScreen({ navigation }) {
   );
 }
 
+function OfficeScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Button onPress={() => navigation.goBack()} title="Go back home" />
+    </View>
+  );
+}
+
 const Drawer = createDrawerNavigator();
 
-export default function DrawerNavigation() {
+export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Home" component={HomeScreen}          options={{
+            title: 'About',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }} />
         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+        <Drawer.Screen name="Office house" component={OfficeScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
