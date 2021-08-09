@@ -1,17 +1,16 @@
 import React from 'react'
 import { Button, StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import StackNavigatorContainer from './Screen/StackNavigatorContainer';
-import TabNavigation from './Screen/TabNavigation';
+// import TabNavigation from './Screen/TabNavigation';
 // import { BrowserRouter } from 'react-router-dom';
-
+import DrawerNavigator from './Screen/DrewerNavigation';
 
 
 export default function App() {
   return (
     <NavigationContainer>
-      <TabNavigation/>
+      {/* <TabNavigation/> */}
+      <DrawerNavigator/>
     </NavigationContainer>
   );
 }

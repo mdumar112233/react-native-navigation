@@ -18,7 +18,7 @@ const Stack = createNativeStackNavigator();
 //   },
 // }
 
-export function StackNavigatorContainer() {
+function StackNavigator() {
     return (
         <Stack.Navigator>
           <Stack.Screen 
@@ -33,7 +33,7 @@ export function StackNavigatorContainer() {
     );
   }
 
-  export const ContactStackNavigator = () => {
+ function ContactStackNavigator() {
     return (
       <Stack.Navigator>
         <Stack.Screen name="Contact" component={ContactScreen} />
@@ -41,7 +41,7 @@ export function StackNavigatorContainer() {
     );
   }
   
-  // export { StackNavigatorContainer, ContactStackNavigator };
+  export { StackNavigator, ContactStackNavigator };
 
 
 
